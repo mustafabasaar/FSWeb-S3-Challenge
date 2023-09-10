@@ -55,15 +55,19 @@ html {
     max-width: 1920px;
     min-width: 428px;
     font-size: 62.5%;
+    
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: white;
+
 }
 
 h1 {
@@ -107,7 +111,9 @@ header {
     height: 10vh;
     background-color: rgb(0, 4, 17);
 }
-
+* {
+--destkop-max-width:1180px
+}
 /* menu */
 
 .menu {
@@ -118,19 +124,93 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display:flex ;
+    flex-direction: column;
+    flex-wrap:wrap ;  
+   
+   
+}
+.menu-container{
+ max-width: 1080px;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: space-around;
+ margin:10rem auto ;
+gap:8rem;
+
+
 }
 
-/* footer section */
-footer {
-    width: 100%;
-    height: 15vh;
-    padding-top: 2.5vh;
-    font-size: 3rem;
+.menu-section{
+    flex-basis:  500px;
+    display:flex ;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+
 }
+.menu-item{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  
+}
+.menu-item p {
+    flex-basis: 100%;
+}
+.menu h2{
+    display: flex;
+    justify-content: center;
+}
+
+.header__container{
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem ;
+      
+}   
+.header__smedia  {
+font-size: 4rem;
+ margin-bottom: 1rem;
+ display: flex;
+ gap:10rem ;
+ margin-top: 1rem;
+
+
+ justify-content: center;
+
+} 
+header nav{
+align-self: stretch;
+}
+.header__menu{
+    display: flex;
+  justify-content: space-evenly;
+}
+/* footer section */
+
+    footer {
+        width: 100%;
+        padding-top: 2.5vh;
+        font-size: 3rem;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        color:white ;
+    }
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
+    * {
+        color: rgb(0,4,17)
+    }
     .header-title {
         width: 75%;
         margin: 0 auto;
@@ -141,12 +221,30 @@ footer {
     /* menu */
     .menu {
         background-image: none;
+        background-color: rgb(225,239,230);
+        padding:0 5rem ;
+        text-align: center;
     }
 
+    .menu-item h4 ,
+    .menu-item p {
+        flex-basis: 100%;
+
+    }
+    .menu-container{
+        
+        flex-direction: column;
+       
+       }
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
     }
-}
+   
+    
+
+ }

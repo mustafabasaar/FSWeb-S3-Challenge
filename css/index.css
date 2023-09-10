@@ -49,6 +49,7 @@ table {
 
 * {
     box-sizing: border-box;
+    color:white ;
 }
 
 html {
@@ -93,6 +94,32 @@ header {
     background-repeat: no-repeat;
 }
 
+.header__container{
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem ;   
+}   
+.header__smedia  {
+font-size: 4rem;
+ margin-bottom: 1rem;
+ display: flex;
+ gap:10rem ;
+ margin-top: 1rem;
+
+
+ justify-content: center;
+
+} 
+header nav{
+align-self: stretch;
+}
+.header__menu{
+    display: flex;
+  justify-content: space-evenly;
+}
+
 /* spacers */
 .spacer {
     width: 100%;
@@ -111,8 +138,16 @@ header {
     height: 100vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
+    display: flex;
 }
+.gallery h2 {
+    margin:1rem auto ;
+    margin-top: 3rem;
 
+}
+.gallery img {
+    margin:3rem;
+}
 /* about us section */
 .about {
     width: 100%;
@@ -135,10 +170,17 @@ header {
 
 .about h2 {
     width: 100%;
+    margin: 5rem auto ;
+}
+.about h3 {
+    width:100%;
+    margin:5rem auto ;
+
 }
 
 .about-container .text {
     width: 50%;
+    line-height: 1.2;
 }
 
 /* contact us section */
@@ -191,9 +233,11 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* mobile media query */
